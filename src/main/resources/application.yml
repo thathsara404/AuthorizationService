@@ -1,0 +1,17 @@
+service:
+  name: SystemTokenProvider
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_DB_CONNECTION_STRING:mongodb://localhost:27017/studentgradingsystem}
+server:
+  port: ${LAUNCH_API_PORT:8085}
+  servlet:
+    contextPath: ${SYSTEM_TOKEN_PROVIDER_BASE_PATH:/system-token}
+
+
+jwt:
+  secret: ${JWT_SECRET:LJACEasq2asd}
+  tokenlife: ${JWT_TOKEN_LIFE:3600}
+
+
